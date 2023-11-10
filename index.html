@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> P1.0 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/jquery-3.6.0.min.js" ></script>
+
+</head>
+<body>
+    <div class="container-fluid bar1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 menu-box">
+                    <ul>
+                        <li id="phoneMenu">
+                            <a class="active3" href="#"> <i class="fas fa-bars"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="phone-menu">
+        <ul>
+        </ul>
+    </div>
+
+    <div class="container data-container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12 left-menu">
+                <div class="box">
+                    <ul>
+                        <!-- <li>
+                            <a href="" class='m1'>Tesla <i class="fas fa-plus"></i> </a> 
+                            <ul class="left-subMenu">
+                                <li>
+                                    <a href="">Tesla1</a>
+                                </li>
+                                <li>
+                                    <a href="">Tesla2</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-12 slide-menu">
+                <div class="slide-container">
+                    <!-- <div class="slide-box">
+                        <img src="img/slide.1.jpg" alt="">
+                        <span>1</span>
+                    </div> -->
+
+                    <div class='btnslide btnback' >
+                        Back
+                    </div>
+                    <div class="btnslide btnnext">
+                        Next
+                    </div>
+
+                    <div class="pagination">
+                        <!-- <ul>
+                            <li>1</li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container item-container">
+        <div class="row">
+            <!-- <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 item-box">
+                <div class="box2">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="txt-box">
+                    <p>hello</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 50px; padding-bottom: 150px;" >
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12" id="footer-box">
+                <select name="txt-city" id="txt-city" class="form-control">
+                    <!-- <option value="0">Select city</option>
+                    <option value="1">Phnom Penh</option>
+                    <option value="2">kamPot</option>
+                    <option value="3">Siem Reap</option> -->
+                </select>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12" id="footer-box">
+                <select name="" id="txt-District" class="form-control">
+
+                </select>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12" id="footer-box">
+                <select name="" id="txt-Commnue" class="form-control">
+
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="fri-box">
+        <ul>
+            <li class="btn-list">
+                <a>Friends List</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="chat-container">
+        <!-- <div class="chat-Box">
+            <div class="chat-title-box">
+                <img src="img/1.jpg" alt="">
+                <span>Tesla</span>
+                <i class="fas fa-times btnClose"></i>
+            </div>
+        </div>
+        <div class="chat-Box">
+            1
+        </div> -->
+    </div>
+
+    <!-- <div class="popup2">
+        <div class="frm">
+            <img src="img/1.jpg" alt=""> <i class="fas fa-close "></i>
+        </div>
+    </div> -->
+    
+</body>
+<script>
+    const item = [ // arrray object in array object
+        {
+            "name":"Cambodia",
+            "title":"Cambodia is a Southeast Asian nation whose landscape spans low-lying plains, the Mekong Delta",
+            "img":"img/slide.1.jpg",
+            "img2":"img/1.jpg",
+            "sub-menu":[
+                {"name":"cambodia1"},
+                {"name":"cambodia2"},
+                {"name":"cambodia3"},
+            ]
+        },
+        {
+            "name":"USA",
+            "title":"The U.S. is a country of 50 states covering a vast swath of North America,with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean.",
+            "img":"img/slide.2.jpg",
+            "img2":"img/2.jpg",
+            "sub-menu":[
+                {"name":"Usa1"},
+                {"name":"Usa2"},
+                {"name":"Usa3"},
+            ]
+        },
+        {
+            "name":"Canada",
+            "title":"Canada is a country in North America. Its ten provinces and three territories extend from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean",
+            "img":"img/slide.3.jpg",
+            "img2":"img/3.jpg",
+            "sub-menu":[
+                {"name":"Canada1"},
+                {"name":"Canada2"},
+                {"name":"Canada3"},
+            ]
+        },
+        {
+            "name":"EngLand",
+            "title":"England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north.",
+            "img":"img/slide.4.jpg",
+            "img2":"img/4.jpg",
+            "sub-menu":[
+                {"name":"England1"},
+                {"name":"England2"},
+                {"name":"England3"},
+            ]
+        },
+        {
+            "name":"Japan",
+            "title":"Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean and is bordered on the west by the Sea of Japan.",
+            "img":"img/slide.5.jpg",
+            "img2":"img/5.jpg",
+            "sub-menu":[
+                {"name":"Japan1"},
+                {"name":"Japan2"},
+                {"name":"Japan3"},
+            ]
+        },
+        {
+            "name":"Paris",
+            "title":"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture.",
+            "img":"img/slide.6.jpg",
+            "img2":"img/6.jpg",
+            "sub-menu":[
+                {"name":"Paris1"},
+                {"name":"Paris2"},
+                {"name":"Paris3"},
+            ]
+        },
+        {
+            "name":"Switzerland",
+            "title":"Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps.",
+            "img":"img/slide.3.jpg",
+            "img2":"img/7.jpg",
+            "sub-menu":[
+                {"name":"Switzerland1"},
+                {"name":"Switzerland2"},
+                {"name":"Switzerland3"},
+            ]
+        },
+        {
+            "name":"Singapore",
+            "title":"Singapore, officially the Republic of Singapore, is an island country and city-state in maritime Southeast Asia.",
+            "img":"img/slide.4.jpg",
+            "img2":"img/8.jpg",
+            "sub-menu":[
+                {"name":"Singapore1"},
+                {"name":"Singapore2"},
+                {"name":"Singapore3"},
+            ]
+        },
+    ];
+
+    const Citylist = [
+        {  
+            "name":"Phnom Penh",
+            "District":[
+                    {"name":"Doun Penh","code":"1201","commnue":[]},
+                    {"name":"Chamkar mor","code":"1202","commnue":[]},
+                    {"name":"Toul kouk", "code":"1203",
+                        "commnue":[
+                            {"name":"T1"},
+                            {"name":"T2"},
+                        ]
+                    },
+            ],
+        },
+        
+        {  "name":"Siem Reap",
+            "District":[
+                    {"name":"S1","code":"2201","commnue":[]},
+                    {"name":"S2","code":"2202","commnue":[]},
+                    {"name":"S3","code":"2203","commnue":[]},
+            ],
+        },
+
+        {  "name":"kamPot",
+            "District":[
+                    {"name":"K1","code":"3201","commnue":[]},
+                    {"name":"K2","code":"3202","commnue":[]},
+                    {"name":"K3","code":"3203", 
+                    "commnue":[
+                            {"name":"T1"},
+                            {"name":"T2"},
+                        ],
+                    },
+            ],
+        },
+
+    ];
+
+    $(document).ready(function(){ // open use Jquery
+    //AddChat
+        $('.fri-box').on('click',"ul li",function(){
+           var eThis = $(this); // as li 
+           if(eThis.index()==0){ // nothing 
+               return; // not show
+           }
+           var name = eThis.find('a span').text(); // find price rbos span
+           var Img = eThis.find('img').attr('src'); // find price img 
+           const ChatContainer =  $('.chat-container');
+           var Id = eThis.index();
+           var Chat = `
+                        <div class="chat-Box" id='${Id}'>
+                            <div class="chat-title-box">
+                                <img src="${Img}" alt="">
+                                <span>${name}</span>
+                                <i class="fas fa-times btnClose"></i>
+                            </div>
+                        </div>`;
+
+            if(ChatContainer.find(`#${Id}`).length == 0 ){ // show tea 1 dor te
+                ChatContainer.append(Chat); // show tea 1 dor
+            }
+        });
+
+    //CloseBox
+        $('.chat-container').on('click','.chat-Box .btnClose',function(){
+            var eThis = $(this);
+            eThis.parents('.chat-Box').remove();
+        });
+    // getboxChat
+        var optfriBox=0;
+        getchatList();
+        function getchatList(){
+            var txt = '';
+            item.forEach((e,i)=>{
+                txt += `
+                    <li>
+                        <a>
+                            <img src="${e['img2']}" alt=""> 
+                            <span>${e['name']} </span>
+                        </a>
+                    </li>   
+                `;
+            });
+            $('.fri-box').find('ul').append(txt);
+        }
+    // click on fri-box
+        $('.fri-box').on('click','li.btn-list',function(){
+            var eThis = $(this);
+            if( optfriBox==0 ){ // show down
+                eThis.parents('.fri-box').css({'height':'40px','overflow-y':'hidden'});
+                optfriBox=1; // f
+            }else{
+                eThis.parents('.fri-box').css({'height':'400px','overflow-y':'scroll'});
+                optfriBox=0; // T show up
+            }
+        });
+
+    // getCity
+        getCitylist();
+        function getCitylist(){
+            var txt ='<option value="-1">Select city</option>';
+            Citylist.forEach( (e, i) =>{
+                txt+=`
+                    <option value="${i}"> ${e['name']} </option>
+                `;
+            });
+            $('#txt-city').html(txt);
+        }
+        $('#txt-city').change(function(){
+            let ind = $(this).val(); // val() use with array object
+            const myDistrict = Citylist[ind]['District']; // for count price rbos dis
+            var txt = '<option value="-1">Select district</option>';
+            myDistrict.forEach( (e,i) =>{
+                txt+= `
+                    <option value="${i}"> ${e['name']} </option>
+                `;
+            });
+            $('#txt-District').html(txt);
+        });
+        $('#txt-District').change(function(){
+            let ind = $(this).val();
+            const Commnue1 = Citylist[ind]['District']; // for count district
+            const myCommnue = Commnue1[ind]['commnue']; // note array object in object
+            var txt = '<option value="-1">Select commnue</option>';
+            myCommnue.forEach( ( e, i) => {
+                txt+= `
+                    <option value='${i}'> ${e['name']} </option>
+                `;
+            });
+            $('#txt-Commnue').html(txt);
+        });
+
+    //getImg
+        getSlideImg();
+        function getSlideImg(){
+            var txt = "";
+            item.forEach(e =>{
+                txt+= `<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 item-box">
+                            <div class="box2">
+                                <img src="${e['img2']}" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <h1>${e['name']}</h1>
+                                <p>${e['title']}</p>
+                            </div>
+                        </div>`;
+            });
+            $('.item-container').find('.row').append(txt);
+        }
+        $('.item-container').on('click','.item-box',function(){
+            var ind = $(this).index(); // index for count location 0->1...
+            var Img2 = item[ind]['img2']; // for count pic in img
+            var frm = `
+                    <div class="popup2">
+                        <div class="frm">
+                            <img src="${Img2}" alt=""> <i class="fas fa-close "></i>
+                        </div>
+                    </div>
+                `;
+            $('body').append(frm);
+        });
+
+        $('body').on('click','.frm .fa-close',function(){
+            $('.popup2').remove();
+        });
+        
+
+    //auto slide
+        var myAutoslide = setInterval(
+            function(){
+                $('.btnnext').click();
+            },
+            4000
+        );
+        $('.slide-container').mouseover(function(){
+            clearInterval(myAutoslide);
+        });
+        $('.slide-container').mouseout(function(){
+            myAutoslide = setInterval(
+                function(){
+                    $('.btnnext').click();
+                },
+                4000
+            );
+        });
+    // click on 1234
+        $('.pagination').on('click','ul li',function(){
+            slide.eq(slideind).hide(); // hide slide ti o...
+            $('.pagination').find('li').eq(slideind).removeClass('active');
+            slideind = $(this).index(); // click hx on number slide
+            slide.eq(slideind).show(); // show slide ti 1->2...
+            $('.pagination').find('li').eq(slideind).addClass('active');
+        });
+
+    // getSlide
+        getSlide();
+        function getSlide(){
+            var txt = '';
+            var txtli = '';
+            var x = 1; 
+            for (i in item){
+                txt += `
+                    <div class="slide-box">
+                        <img src="${item[i]['img']}" alt="">
+                        <span>${x} / ${item.length} </span> 
+                        <h1> ${item[i]['name']} </h1>
+                    </div>
+                `;
+                txtli +=`
+                    <li>${x}</li>
+                `;
+                x++; // plus up 1+1=2+1=3+1=4
+            }
+            $('.slide-container').append(txt);
+            $('.pagination').append(`<ul>${txtli}</ul>`); // append li rbos pagi jol 
+            $('.pagination').find('li').eq(0).addClass('active'); // add class hx make color
+        }
+
+        var slideind = 0; // pakas hx yk mk use in eq for count slide
+        var slide = $('.slide-box'); 
+        var numslide = slide.length; // for count number slide 4
+        slide.hide(); // hide slide all
+        slide.eq(slideind).show(); // show slide 0
+
+        $('.btnnext').click(function(){
+            slide.eq(slideind).hide(); // 0->1...
+            $('.pagination').find('li').eq(slideind).removeClass('active');
+            slideind++; // for count up 0->1->2...
+            if( slideind >= numslide ){ // study F and T count 0->3->0
+                slideind=0; // T vea show
+            }
+            slide.eq(slideind).show(); // show ti 0->1
+            $('.pagination').find('li').eq(slideind).addClass('active');
+        });
+        $('.btnback').click(function(){
+            slide.eq(slideind).hide(); // 0->5-4
+            $('.pagination').find('li').eq(slideind).removeClass('active');
+            slideind--; // count down 5-4-3-2-1-0
+            if( slideind < 0 ){ // 
+                slideind = numslide-1; // T show 3-1=2-1=1-1=0-1=-1
+            }
+            slide.eq(slideind).show(); // f 2<0 1<0 0<0 -1<0  
+            $('.pagination').find('li').eq(slideind).addClass('active');
+        });
+
+    //loop leftMenu & submenu
+        getLeftMenu();
+        function getLeftMenu(){
+            var txt = '';
+            for( i in item ){ // i = index ti 0 rbos item
+                txt += `
+                        <li>
+                            <a href="#" class='m1'> ${item[i]['name']} <i class="fas fa-plus"></i> </a> 
+                        </li>
+                `;
+            }
+            $('.left-menu').find('.box ul').append(txt);
+        }
+        $('.left-menu').on('click','.m1',function(){ //click plus oy show submenu
+            var eThis = $(this); // = m1
+            var Parent = eThis.parent(); // find price for li
+            var ind = Parent.index(); // for count li 0->1...
+            var SubMenul = item[ind]['sub-menu']; // count for subMenu all
+            var txt = '';
+                for (x in SubMenul){
+                    txt += `
+                        <li>
+                            <a href="#" class='m1'>${SubMenul[x]['name']}</a> 
+                        </li> `;
+                }
+            var numsubMenu = Parent.find('.left-subMenu').length; // find li in leftsubmenu hz length for count number rbos sub
+            if( numsubMenu == 0){ // if it == 0 nus jenh tea 1 dor te
+                eThis.find('i').removeClass('fa-plus'); // i in m1 hx m1 as eThis
+                eThis.find('i').addClass('fa-minus');
+                Parent.append( `<ul class="left-subMenu"> ${txt} </ul>` ); // append li in subMenu
+            }else{
+                // Parent.find('.left-subMenu').remove(); // put remove easy as
+                var Minus = eThis.find('.fa-minus').length;
+                if( Minus > 0 ){
+                        Parent.find('.left-subMenu').slideUp(); // up
+                        eThis.find('i').addClass('fa-plus'); // remove plus
+                        eThis.find('i').removeClass('fa-minus'); // add minus
+                }else{
+                        Parent.find('.left-subMenu').slideDown(); // down
+                        eThis.find('i').removeClass('fa-plus');
+                        eThis.find('i').addClass('fa-minus');
+                }
+            }
+        });
+
+    // loop phoneMenu
+    var Popup = '<div class="popup"></div>';
+        getPhoneMenu();
+        function getPhoneMenu(){
+            var txt = '';
+            for (i in item){ // item[i] for count number 
+                txt += `
+                    <li>
+                        <a href="#">${item[i]['name']}</a>
+                    </li>
+                `;
+            }
+            $('.phone-menu').find('ul').html(txt); // append kr ban         
+        }
+        // show PhoneMenu
+        $('#phoneMenu').click(function(){
+            $('.phone-menu').css({"left":"0px"}); //change css 
+            $('body').append(Popup); // remove popup in body
+        });
+        //close PhoneMenu
+        $('body').on('click',".popup",function(){ //jab body hz find popup oy run
+            $('.popup').remove();
+            $('.phone-menu').css({"left":"-252px"});
+        });
+
+    // loop menu and subMenu
+        getMenu();
+        function getMenu(){
+            var menu = '<li class="house"><a href="#"><i class="fas fa-home"></i> </a></li>';
+            for(i in item){
+                var subMenu = item[i]['sub-menu']; // for count sub-menu 
+                var txt = "";
+                for( x in subMenu){
+                    txt += `
+                        <li>
+                            <a href="">${subMenu[x]['name']}</a>
+                        </li>
+                    `;
+                }
+                menu += `
+                    <li>
+                        <a  href="#">${item[i]['name']}</a>
+                        <ul class="sub-menu">
+                            ${txt}
+                        </ul>
+                    </li>
+                `;
+            }
+            $('.menu-box').find('ul').append(menu);
+        }
+    
+    // click on menu
+        $('body').on('click','.menu-box ul li a',function(){
+            var eThis = $(this);
+           $('li a').removeClass('active3');
+           eThis.addClass('active3');
+        });
+    
+    // click on sub
+        $('body').on('click','.menu-box ul li',function(){
+            var eThis = $(this);
+            var ind = eThis.index()-2; // count 0 mk -2 mean ney tha -2 data is (0,1)
+            var Img2 = item[ind]['img2']; // for count pic in img
+            var frm = `
+                    <div class="popup2">
+                        <div class="frm">
+                            <img src="${Img2}" alt=""> 
+                            <i class="fas fa-close "></i>
+                        </div>
+                    </div>
+                `;
+            $('body').append(frm);
+            
+        });
+
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,597 @@
+h1,h2,h3,p,ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+div{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.bar1{
+    background-color: cornflowerblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu-box{
+    padding: 0px 5px;
+}
+.menu-box ul li{
+    float: left;
+    position: relative;
+}
+.menu-box ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.menu-box ul li a:hover{
+    background-color: rgba(255, 99, 71, 0.308);
+}
+.menu-box ul.sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 150px;
+    background-color: #fff;
+    box-shadow: 1px 2px 5px 0px #ccc;
+
+    display: none;
+}
+.menu-box ul.sub-menu li{
+    width: 100%;
+}
+.menu-box ul.sub-menu li a{
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.705);
+    padding: 10px;
+    font-size: 13px;
+    /* border: 1px solid#555; */
+}
+.menu-box ul.sub-menu li a:hover{
+    background-color: #ccc;
+}
+.menu-box ul li:hover ul.sub-menu{
+    display: block;
+    z-index: 1;
+}
+.phone-menu{
+    position: fixed;
+    top: 0;
+    left: -252px;
+    width: 180px;
+    height: 100%;
+    background-color: cornflowerblue;
+    box-shadow: 1px 1px 5px #555;
+    z-index: 99;
+    transition: 0.4s;
+}
+.phone-menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.phone-menu ul li a:hover{
+    background-color: rgba(255, 99, 71, 0.253);
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.336);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 98;
+}
+.data-container{
+    margin-top: 70px;
+}
+.left-menu{
+    padding: 5px 5px;
+}
+.left-menu .box{ 
+    width: 100%;
+    float: left;
+    background-color: crimson;
+    box-sizing: border-box;
+}
+.left-menu .box ul li{
+    width: 100%;
+    float: left;
+}
+.left-menu .box ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+}
+.left-menu .box ul li a i{
+    float: right;
+    font-size: 15px;
+}
+.left-menu .box ul li a:hover{
+    background-color: tomato;
+}
+.left-subMenu{
+    width: 90%;
+    float: left;
+    background-color: black;
+    margin-left: 15px;
+}
+
+.slide-menu{
+    padding: 5px 5px;
+}
+.slide-container{
+    width: 100%;
+    height: 400px;
+    background-color: cornflowerblue;
+    position: relative;
+    /* display: flex;
+    flex-direction: row; */
+}
+.slide-container .pagination{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    background-color: black;
+    padding: 2px;
+    transform: translate(-50%,-50%);
+}
+.slide-container .pagination .active{
+    background-color: #fff;
+}
+.slide-container .pagination ul li{
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    float: left;
+    color: black;
+    font-size: 11px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-container .pagination ul li:hover{
+    background-color: tomato;
+}
+
+.slide-box{
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: #ccc;
+}
+.slide-box span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 4px;
+}
+.slide-box h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(85, 85, 85, 0.603);
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 12px;
+}
+.slide-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btnslide{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-color: rgba(0, 0, 255, 0.815);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btnslide:hover{
+    background-color: rgb(220, 20, 60);
+}
+.btnback{
+    left: 20px;
+}
+.btnnext{
+    right: 20px;
+}
+
+.item-container{
+    margin-top: 10px;
+}
+.item-box{
+    height: 350px;
+    padding: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.item-box .box2{
+    width: 100%;
+    height: 60%;
+    background-color: brown;
+    overflow: hidden;
+}
+.item-box .box2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.txt-box{
+    width: 100%;
+    height: 40%;
+    float: left;
+    box-shadow: 1px 1px 5px 0px #ccc;
+}
+.txt-box h1{
+    font-size: 15px;
+    font-weight: bold;
+ }
+.txt-box p{
+   font-size: 13px;
+   color: #555;
+}
+.item-box .box2 :hover{
+   transform: scale(1.1);
+}
+
+.popup2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.349);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.frm{
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+.frm img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.frm .fa-close{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 3px;
+}
+.frm .fa-close:hover{
+    background-color: blue;
+}
+
+.fri-box{
+    width: 230px;
+    height: 400px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    border: 1px solid#555;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 3px;
+}
+.fri-box ul li.btn-list{
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.fri-box ul li{
+    float: left;
+    width: 100%;
+}
+.fri-box ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+}
+.fri-box ul li img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.fri-box ul li a:hover{
+    background-color: rgba(85, 85, 85, 0.397);
+}
+
+.chat-container{
+    position: fixed;
+    bottom: 10px;
+    right: 300px;
+    z-index: 1;
+}
+.chat-Box{
+    width: 230px;
+    height: 350px;
+    background-color: #fff;
+    float: right;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    box-shadow: 1px 1px 5px 0 #eee;
+}
+.chat-title-box{
+    width: 100%;
+    height: 45px;
+    /* background-color: crimson; */
+    box-shadow: 1px 1px 3px 0px #666;
+    /* border-radius: 5px; */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    position: relative;
+}
+.chat-title-box img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.chat-title-box span{
+    font-size: 15px;
+    color: black;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.chat-title-box .btnClose{
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 17px;
+}
+
+.active3{
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.item-box{
+        height: 320px;
+    }
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.menu-box ul li a{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .menu-box ul.sub-menu li a{
+        padding: 8px;
+        font-size: 12px;
+    }
+    .data-container{
+        margin-top: 50px;
+    }
+
+    .slide-container .pagination ul li{
+        width: 20px;
+        height: 20px;
+    }
+    .btnslide{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .slide-box h1{
+        font-size: 15px;
+        color: white;
+        border-radius: 5px;
+        padding: 7px 12px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px){ 
+
+    .container{
+        max-width: 100%;
+    }
+    .menu-box ul li:not(#phoneMenu, .house) a{
+       display: none;
+    }
+    .slide-container .pagination ul li{
+        width: 13px;
+        height: 15px;
+    }
+    .btnslide{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .slide-box h1{
+      
+        font-size: 15px;
+        color: white;
+        border-radius: 5px;
+        padding: 7px 12px;
+    }
+
+    .item-box{
+        height: 300px;
+       
+    }
+
+    .frm{
+        width: 80%;
+        height: 80%;
+    }
+
+    .fri-box{
+        width: 230px;
+        height: 350px;
+    }
+
+    .chat-Box{
+        width: 200px;
+        height: 300px;
+    }
+    .left-menu .box{ 
+        width: 100%;
+        float: left;
+        background-color: crimson;
+        box-sizing: border-box;
+    }
+
+    .left-menu .box ul li a{
+        padding: 10px;
+        color: white;
+        font-size: 13px;
+    }
+
+    .slide-container, .left-menu{
+        height: 330px;
+    }
+    .data-container{
+        margin-top: 70px;
+    }
+}
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .menu-box ul li:not(#phoneMenu, .house) a{
+        display: none;
+     }
+     .slide-container .pagination ul li{
+         width: 15px;
+         height: 15px;
+     }
+     .btnslide{
+         font-size: 13px;
+         font-weight: bold;
+     }
+     .slide-box h1{
+         font-size: 15px;
+         color: white;
+         border-radius: 5px;
+         padding: 7px 12px;
+     }
+
+    #footer-box{
+        margin-bottom: 10px;
+    }
+    .item-box{
+        height: 280px;
+    }
+    .txt-box h1{
+        font-size: 13px;
+        font-weight: bold;
+     }
+    .txt-box p{
+       font-size: 11px;
+       color: #555;
+       margin-top: 5px;
+    }
+    .data-container{
+        margin-top: 15%;
+    }
+
+    .left-menu .box{ 
+        width: 100%;
+        height: 330px;
+        float: left;
+        background-color: crimson;
+    }
+    .left-menu .box ul li a{
+        padding: 10px;
+        font-size: 13px;
+    }
+    .slide-container{
+        width: 100%;
+        height: 300px;
+    }
+    .slide-box span{
+       font-size: 12px;
+    }
+
+
+    .frm{
+        width: 80%;
+        height: 80%;
+    }
+
+    .fri-box{
+        width: 200px;
+        height: 350px;
+    }
+    .fri-box ul li a{
+        font-size: 13px;
+    }
+    .fri-box ul li img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .chat-container{
+        position: fixed;
+        bottom: 10px;
+        right: 220px;
+        z-index: 1;
+    }
+    .chat-Box{
+        width: 180px;
+        height: 300px;
+    }
+
+    .phone-menu{
+        width: 120px;
+    }
+    .phone-menu ul li a{
+        font-size: 13px;
+    }
+    .data-container{
+        margin-top: 60px;
+    }
+    .menu-box{
+        margin-left: -15px;
+    }
+}
