@@ -538,7 +538,6 @@ div{
 
     .left-menu .box{ 
         width: 100%;
-        height: 330px;
         float: left;
         background-color: crimson;
     }
@@ -557,7 +556,7 @@ div{
 
     .frm{
         width: 80%;
-        height: 80%;
+        height: 60%;
     }
 
     .fri-box{
