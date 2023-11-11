@@ -102,6 +102,7 @@ div{
     float: left;
     background-color: crimson;
     box-sizing: border-box;
+    z-index: 99;
 }
 .left-menu .box ul li{
     width: 100%;
@@ -283,8 +284,8 @@ div{
 }
 .frm .fa-close{
     position: absolute;
-    right: 3px;
-    top: 3px;
+    right: 0px;
+    top: 0px;
     width: 25px;
     height: 25px;
     background-color: crimson;
